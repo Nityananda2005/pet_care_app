@@ -11,6 +11,8 @@ API.interceptors.request.use((req) => {
     return req;
 });
 
+console.log("BASE URL:", import.meta.env.VITE_BASE_URL);
+
 // Add a response interceptor to handle unauthorized access
 API.interceptors.response.use(
     (response) => response,
