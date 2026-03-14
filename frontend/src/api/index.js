@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API = axios.create({ baseURL: import.meta.env.VITE_BASE_URL || 'http://127.0.0.1:5000/api' });
+export const API = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/api' });
 
 // Add a request interceptor to include the JWT token in headers
 API.interceptors.request.use((req) => {
