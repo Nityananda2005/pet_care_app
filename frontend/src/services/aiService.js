@@ -2,7 +2,7 @@
  * AI Service — calls the backend API for real Groq-powered analysis.
  */
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/api';
 
 /**
  * Analyze pet symptoms using the AI backend.
