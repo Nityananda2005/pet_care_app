@@ -3,7 +3,9 @@ const path = require('path');
 const fs = require('fs');
 
 // Ensure uploads directory exists
-const uploadDir = 'uploads/';
+// Use /tmp on Vercel because the root filesystem is read-only
+const uploadDir = process.env.VERCEL ? '/tmp/uploads/' : 'uploads/';
+
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
 }
